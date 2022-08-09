@@ -1,4 +1,4 @@
-//      
+// @flow
 
 const { pricePlans, pricePlanNames } = require("../price-plans/price-plans");
 
@@ -10,7 +10,7 @@ const meters = {
     METER4: "smart-meter-4",
 };
 
-const meterPricePlanMap                                                               = {
+const meterPricePlanMap : {[key: $Values<typeof meters>]: $Values<typeof pricePlans>} = {
     [meters.METER0]: pricePlans[pricePlanNames.PRICEPLAN0],
     [meters.METER1]: pricePlans[pricePlanNames.PRICEPLAN1],
     [meters.METER2]: pricePlans[pricePlanNames.PRICEPLAN2],

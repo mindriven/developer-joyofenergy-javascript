@@ -1,6 +1,6 @@
-//      
-                                                                                     
-                                                                               
+// @flow
+export type PricePlanEntry = {supplier: $Values<typeof supplierNames>, rate: number};
+export type PricePlans = {[key:$Values<typeof pricePlanNames>]: PricePlanEntry}
 
 const pricePlanNames = {
     PRICEPLAN0: "price-plan-0",
@@ -14,7 +14,7 @@ const supplierNames = {
     POWER_FOR_EVERYONE_ENERGY_SUPPLIER: "Power for Everyone",
 };
 
-const pricePlans              = {
+const pricePlans : PricePlans = {
     [pricePlanNames.PRICEPLAN0]: {
         supplier: supplierNames.DR_EVILS_DARK_ENERGY_ENERGY_SUPPLIER,
         rate: 10,

@@ -1,10 +1,10 @@
-//      
-                                               
+// @flow
+import type { Reading } from './../usage/usage'
 const { meters } = require("../meters/meters");
 
-                                                                    
+export type MetersData = {[key: $Values<typeof meters>]: Reading[]};
 
-const generateSingle                   = () => {
+const generateSingle : () => Reading[] = () => {
     const startTime = 1607686125; // Friday, 11 December 2020 11:28:45 GMT+00:00
     const hour = 3600;
     const readingsLength = Math.ceil(Math.random() * 20);
@@ -15,9 +15,9 @@ const generateSingle                   = () => {
     }));
 };
 
-                                            
+type MetersDataGenerator = () => MetersData;
 
-const generateAllMeters                       = () => {
+const generateAllMeters : MetersDataGenerator = () => {
     const readings = {};
 
     for (const key in meters) {
@@ -29,6 +29,6 @@ const generateAllMeters                       = () => {
     return readings;
 };
 
-const readingsData              = generateAllMeters();
+const readingsData : MetersData = generateAllMeters();
 
 module.exports = { readingsData };
