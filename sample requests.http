@@ -1,0 +1,29 @@
+@hostname = localhost
+@port = 8080
+@host = http://{{hostname}}:{{port}}
+@meterId = smart-meter-0
+
+GET {{host}}/readings/read/{{meterId}}
+
+###
+
+GET {{host}}/price-plans/compare-all/{{meterId}}
+
+###
+
+GET {{host}}/price-plans/recommend/{{meterId}}?limit=10
+
+###
+
+POST {{host}}/readings/store
+content-type: application/json
+
+{
+  "smartMeterId": "{{meterId}}",
+  "electricityReadings": [
+    {
+      "time": 1606636800,
+      "reading": 0.0503
+    }
+  ]
+}
