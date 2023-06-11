@@ -16,7 +16,10 @@
 				"mhutchie.git-graph",
 				"humao.rest-client",
 				"ryanluker.vscode-coverage-gutters",
-				"flowtype.flow-for-vscode"
+				"flowtype.flow-for-vscode",
+				"eamodio.gitlens",
+				"kavod-io.vscode-jest-test-adapter",
+				"numso.prettier-standard-vscode"
 			]
 		}
 	},
