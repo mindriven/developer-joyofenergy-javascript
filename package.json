@@ -2,6 +2,7 @@
   "name": "joi-energy-js",
   "version": "1.0.0",
   "description": "",
+  "type": "commonjs",
   "scripts": {
     "test": "jest --coverage",
     "test-watch": "jest --watchAll",
@@ -9,7 +10,7 @@
     "dev": "nodemon --inspect",
     "build": "flow-remove-types ./flowtyped_src -d src/ -x .json,.js",
     "flow": "flow check ./flowtyped_src",
-    "hot-build": "nodemon noop.js --config nodemon-rebuilding.json"
+    "hot-build": "nodemon -e js --watch flowtyped_src --exec \"npm run build && npm run start\""
   },
   "author": "Gabriel McCallin",
   "license": "ISC",
