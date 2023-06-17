@@ -19,7 +19,9 @@
 				"flowtype.flow-for-vscode",
 				"eamodio.gitlens",
 				"kavod-io.vscode-jest-test-adapter",
-				"numso.prettier-standard-vscode"
+				"numso.prettier-standard-vscode",
+				"CucumberOpen.cucumber-official",
+				"alexkrechik.cucumberautocomplete"
 			]
 		}
 	},
