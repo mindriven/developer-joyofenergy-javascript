@@ -15,7 +15,7 @@ const recommend = (getReadings: (string) => Reading[], req: $Request): any => {
 };
 
 const extractCost = (cost: UsageForAPricePlans): number => {
-    const [, value] = Object.entries(cost).find( ([key]) => key in pricePlans) || [0,0];
+    const [, value] = Object.entries(cost).find( ([key]) => key in pricePlans) || ["not existing plan",0];
     return ((value: any) :number)
 }
 

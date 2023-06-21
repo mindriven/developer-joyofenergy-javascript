@@ -20,7 +20,7 @@ const timeElapsedInHours = (readings: Reading[]): number => {
 };
 
 const usage = (readings: Reading[]): number => {
-    return average(readings) / timeElapsedInHours(readings);
+    return average(readings) * timeElapsedInHours(readings);
 };
 
 const usageCost = (readings: Reading[], rate: number): number => {

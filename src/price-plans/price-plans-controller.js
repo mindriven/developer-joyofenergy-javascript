@@ -15,7 +15,7 @@ const recommend = (getReadings                       , req          )      => {
 };
 
 const extractCost = (cost                     )         => {
-    const [, value] = Object.entries(cost).find( ([key]) => key in pricePlans) || [0,0];
+    const [, value] = Object.entries(cost).find( ([key]) => key in pricePlans) || ["not existing plan",0];
     return ((value     )        )
 }
 
